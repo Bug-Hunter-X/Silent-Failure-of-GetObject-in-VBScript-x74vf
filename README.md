@@ -1,0 +1,3 @@
+This repository demonstrates a common, yet easily overlooked, error in VBScript: the silent failure of the `GetObject` function.  The `GetObject` function is frequently used to create objects from external files (like Excel workbooks or Word documents). If the file specified in the path does not exist, or if there is an error accessing the file, the function may return `Nothing` without raising an error, making debugging difficult.
+
+The `bug.vbs` file shows the problematic code. The `bugSolution.vbs` file provides a more robust solution using proper error handling to explicitly check for errors and handle them gracefully.
